@@ -27,13 +27,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
 }
-//Microsoft Azure Connection
 
-buildscript {
-    repositories {
-        jcenter()
-    }
-}
-
-compile 'com.microsoft.azure:azure-mobile-android:3.4.0'
 
