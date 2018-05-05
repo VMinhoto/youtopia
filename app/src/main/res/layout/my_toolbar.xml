@@ -10,15 +10,17 @@
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleTextColor="@android:color/black"
-        app:fontFamily="@font/pacifico"
+        app:titleTextColor="?attr/colorPrimary"
+        app:fontFamily="@font/pacifico_regular"
         android:background="?attr/colorPrimary">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Toolbar Title"
-            android:fontFamily="@font/pacifico"
+            android:text="Youtopia"
+            android:fontFamily="@font/pacifico_regular"
+            android:textSize="30dp"
+            android:textColor="@android:color/black"
             android:layout_gravity="center"
             android:id="@+id/toolbar_title" />
 
