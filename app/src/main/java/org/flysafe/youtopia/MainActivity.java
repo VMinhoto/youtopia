@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 import com.microsoft.windowsazure.mobileservices.*;
+import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
+
+import java.net.MalformedURLException;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,10 +28,14 @@ public class MainActivity extends AppCompatActivity {
         TextView mTitle = (TextView) toolbarTop.findViewById(R.id.toolbar_title);
 
         //Azure Connection: mClient Method
-        mClient = new MobileServiceClient(
-                "https://youtopia.azurewebsites.net",
-                this
-        );
+        try {
+            mClient = new MobileServiceClient(
+                    "https://youtopia.azurewebsites.net",
+                    this
+            );
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
 
         //Get TodoItem Class & Call mClient method
         TodoItem item = new TodoItem();
